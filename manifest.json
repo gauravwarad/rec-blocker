@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "rec-blocker",
+    "version": "1.0",
+  
+    "description": "block content which I find annoying/distracting.",
+  
+    "icons": {
+      "48": "icons/border-48.png"
+    },
+    "permissions": ["scripting", "activeTab"],
+
+    "content_scripts": [
+      {
+        "matches": ["*://*.reddit.com/*"],
+        "js": ["block_reddit.js"]
+      }
+    ]
+  }
